@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="shortcut icon" href="resources/favIcon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+    <title>TokyoDango</title>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+
+<body onscroll="minimiseNav()" class="m-0">
+    <!-- main body of the page -->
+    <div class=" absolute flex items-center justify-center flex-col overflow-scroll ml-0 bg-white w-full">
+        <div id="divOfNav"
+            class="fixed top-0 flex items-center justify-around gap-8 bg-red-700 flex-col z-40 w-full transition-all duration-500 mt-0 p-2 drop-shadow-lg">
+            <div id="navImgWithName" class=" relative h-20 lg:h-40 bg-red-700 flex justify-center items-end w-full">
+                <img class="relative w-fit h-3/6" src="resources/logoWithJpnName.png" alt="" srcset="">
+                <img src="resources/mamSingPic.png" class="relative -mb-2  h-full" alt="" srcset="">
+            </div>
+        </div>
+
+        <div
+            class="fixed hidden md:flex top-28 right-2 w-16 h-16 z-50 rounded-full bg-emerald-500 drop-shadow-sm  items-center justify-center transition delay-150 duration-300 ease-in-out animate-bounce bg-gradient-to-tr from-blue-700 to-fuchsia-600 p-1 cursor-alias">
+            </link>
+            <a target="_blank" href="https://www.facebook.com/messages/t/390966717425014">
+                <img src="resources/messenger-icon-2880-thumb.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="fixed w-full top-5 left-5 z-50 hidden">
+            <button class="translate-btn" onclick="translatePage('en')">English</button>
+            <button class="translate-btn" onclick="translatePage('bn')">বাংলা</button>
+            <button class="translate-btn" onclick="translatePage('ja')">日本語</button>
+        </div>
+        <!-- our Food display section -->
+        <div class="flex justify-center flex-col items-center z-10">
+            <div
+                class=" mt-24 bg-black flex justify-center flex-col items-center border-l-orange-300 border-l-8 border-r-orange-300 border-r-8 w-5/6">
+                <img id="imgOfFoodDisplaySectionsShop" class="w-full" src="./resources/cook2.jpg" alt="" srcset="">
+                <div>
+                    <div class="bg-[url('/resources/gif-tenor.gif')] bg-cover">
+                        <div class=" flex flex-row items-center justify-center p-2">
+                            <!--  -->
+                            <div class="flip-box">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front">
+                                        <img src="./resources/tokyoDangoLogo.png" alt="Paris"
+                                            style="width:300px;height:200px">
+                                    </div>
+                                    <div class="flip-box-back flex items-center justify-center">
+                                        <img id="imgOfFoodDisplaySectionsFood" class="w-11/12 h-5/6"
+                                            src="./resources/greenTea.png" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-3 bg-none">
+                            <div class="bg-red-700 col-span-1 rounded-md">
+                                <div class="bg-red-800 rounded-t-md h-36 drop-shadow-md">
+                                    <img class="h-full w-full rounded-t-md" src="./resources/takoyaki-japanese-food.gif"
+                                        alt="" srcset="">
+                                </div>
+                                <div class="text-white m-2">
+                                    <h1 class="font-bold text-center text-xl">Tokyo Dango</h1>
+                                    <p class="text-justify">Dango, also known as Takoyaki, is a popular Japanese
+                                        confectionary
+                                        (wagashi) that is
+                                        typically made into round
+                                        balls and served on a bamboo skewer. The word "dango" literally means
+                                        "dumpling".
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-red-700 col-span-1 rounded-md">
+                                <div class="bg-red-800 rounded-t-md h-36 drop-shadow-md">
+                                    <img class="h-full w-full rounded-t-md" src="./resources/gyozaGIF.gif" alt=""
+                                        srcset="">
+                                </div>
+                                <div class="text-white m-2">
+                                    <h1 class="font-bold text-center text-xl">Tokyo Gyoza</h1>
+                                    <p class="text-justify">Gyoza, also known as Jiaozi, are Japanese dumplings that are
+                                        usually
+                                        made with a thin dough
+                                        wrapper and a filling of ground meat, seafood, or vegetables. <b>It is the most
+                                            popular
+                                            item on our menu</b>.</p>
+                                </div>
+                            </div>
+                            <div class="bg-red-700 col-span-1 rounded-md">
+                                <div class="bg-red-800 rounded-t-md h-36 drop-shadow-md">
+                                    <img class="h-full w-full rounded-t-md" src="./resources/matcha.gif" alt=""
+                                        srcset="">
+                                </div>
+                                <div class="text-white m-2">
+                                    <h1 class="font-bold text-center text-xl">Tokyo Green Tea</h1>
+                                    <p class="text-justify">It is high in antioxidants, which may help prevent or remedy
+                                        cellular damage and support your overall health. It may even have some
+                                        properties
+                                        that
+                                        help protect against <b>cancer</b> and heart disease.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full bg-orange-300  h-5"></div>
+            </div>
+            <div class=" w-full h-64 -z-10 -mt-32">
+                <img class="w-full h-full" src="./resources/land.png" alt="" srcset="">
+            </div>
+        </div>
+        <!-- what we offer section -->
+        <div>
+            <div class="flex flex-col p-5 items-center justify-center">
+                <div class="grid items-center justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="w-80 h-80 rounded-full">
+                        <img class="w-80 h-80 border-8 border-red-700 rounded-full" src="./resources/edit2.gif" alt=""
+                            srcset="">
+                        <h1
+                            class="bg-gradient-to-b from-amber-700 to-red-700 absolute flex items-center justify-center h-80 -mt-80 opacity-50  w-80 text-center rounded-full text-white font-bold text-2xl">
+                            First in Bangladesh</h1>
+                    </div>
+                    <div class="w-80 h-80 rounded-full">
+                        <img class="w-80 h-80 border-8 border-red-700 rounded-full" src="./resources/edit3.gif" alt=""
+                            srcset="">
+                        <h1
+                            class="bg-gradient-to-b from-amber-700 to-red-700 absolute flex items-center justify-center h-80 -mt-80 opacity-50  w-80 text-center rounded-full text-white font-bold text-2xl">
+                            Japanese authenticity</h1>
+                    </div>
+                    <div class="w-80 h-80 rounded-full">
+                        <img class="w-80 h-80 border-8 border-red-700 rounded-full" src="./resources/edit1.gif" alt=""
+                            srcset="">
+                        <h1
+                            class="bg-gradient-to-b from-amber-700 to-red-700 absolute flex items-center justify-center h-80 -mt-80 opacity-50  w-80 text-center rounded-full text-white font-bold text-2xl">
+                            A better alternative</h1>
+                    </div>
+                </div>
+                <p class="mt-5 text-center font-medium text-gray-950 text-xl italic">We are thrilled to introduce you to
+                    the
+                    most
+                    renowned Japanese delicacies: Takoyaki, Gyoza, and Green Tea! These exquisite treats are guaranteed
+                    to make your mouth water and transport you to the heart of Japan, all while staying right here in
+                    Bangladesh.</p>
+                <br>
+                <p class="text-center font-medium text-gray-950 text-xl italic">Crafted with the utmost care, our food
+                    is not
+                    only irresistibly delicious but also prioritizes health and hygiene. We take immense pride in
+                    delivering a one-of-a-kind taste experience that you’ll treasure forever. Once you savor any of our
+                    offerings, the flavors will leave an unforgettable impression! </p>
+            </div>
+        </div>
+        <!-- our awareness section  -->
+        <div>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="col-span-1 hidden lg:block -ml-48">
+                    <img class="" src="./resources/juice-bar.png" alt="" srcset="">
+                </div>
+                <div class="p-10 flex justify-center items-center flex-col">
+                    <h1
+                        class=" text-rose-700 font-bold animate-pulse transform translate-y-3 transition-transform duration-500 hover:translate-y-0  ease-in">
+                        <span class="text-6xl">Satisfy</span> <span class="text-3xl">your
+                            cravings.</span> <span class="text-4xl">Order
+                            now on</span> <span class="text-5xl lg:text-7xl">Foodpanda.</span>
+                    </h1>
+                    <img src="./resources/illustration_pandadelivery.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <!-- about section  -->
+        <div class="flex items-center justify-center flex-col">
+            <div class="mt-20 w-11/12 lg:w-5/6 bg-slate-800 p-2">
+                <div class="flex items-center justify-center "><img class="w-52 rounded-full" src="resources/mam2.png"
+                        alt="" srcset="">
+                </div>
+
+                <div class="w-full  md:rounded-full mt-5 text-white text-justify p-5">
+                    We're seeking exceptional young women <span class="text-3xl font-bold">entrepreneurs</span> ready to
+                    make a
+                    significant
+                    impact on society. If you're passionate about innovation and empowerment, we invite you to apply
+                    for
+                    our
+                    sponsorship program. Check our eligibility criteria and submit your application today. Let's
+                    build a
+                    brighter future, together.
+                </div>
+                <div class="flex items-center justify-center flex-col">
+                    <a target="_blank" class="btn bg-red-700 text-white rounded-full " href="http://">Fill out the
+                        form</a>
+                </div>
+
+            </div>
+
+            <!-- about details section -->
+            <div>
+                <h1 class="relative font-bold text-xl text-slate-500 mt-10 text-center">About Us</h1>
+                <div class="inline-flex items-center justify-center w-full">
+                    <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
+                    <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 ">
+                        <svg class="w-4 h-4 text-gray-700 dark:text-gray-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                            <path
+                                d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- text of about section -->
+            <div class="w-full lg:w-5/6 p-5 bg-black">
+                <!-- left side image -->
+                <div
+                    class="text-black flex items-center gap-3 flex-col md:flex-row mt-10 drop-shadow-md bg-slate-50 p-1">
+                    <img src="resources/shoryubd-24.png" class="w-full md:w-1/2 rounded-md" alt="" srcset="">
+                    <div class="w-full p-2">
+                        <h1 class="font-bold text-2xl">Step into tomorrow with Shoryu</h1>
+                        <p class="text-justify text-lg">We empower Bangladeshi women to become entrepreneurs through
+                            education, training, and guidance.
+                            By providing essential skills and access to resources, we help them start their
+                            entrepreneurial
+                            journey. TokyoDango is our platform to foster innovation and self-reliance, creating
+                            opportunities for personal growth and contributing to Bangladesh's economic development.
+                        </p>
+                    </div>
+                </div>
+                <!-- right img -->
+                <div
+                    class="text-black flex items-center gap-3 flex-col-reverse md:flex-row mt-10 drop-shadow-md bg-slate-50 p-1">
+                    <div class="w-full p-2 text-justify">
+                        <h1 class="font-bold text-2xl">How you can become a vendor</h1>
+                        <p class=" text-lg">If you interested to become one of our proud vendor and
+                            change
+                            your
+                            life. You will get our full support continually. To become our vendor you need to fulfil
+                            some of
+                            our requirements. Please read them and if feel positive then proceed to next step.
+                        </p>
+                        <p class="text-lg">Becoming an entrepreneur is no easy task. It requires strong leadership,
+                            effective
+                            management, and excellent teamwork skills. You must be capable of collaborating with others,
+                            handling pressure, and making sound decisions while breaking traditional norms. While we
+                            will provide resources, financing, and guidance, these come with expectations—you must
+                            achieve profitability within three months. Additionally, you must ensure the sustainable
+                            growth of our business, while we retain control over major decisions that you will need to
+                            execute effectively. </p>
+                        <p class="text-lg">That said, there’s no need to worry. We will guide, train, and prepare you to
+                            run a food
+                            cart.
+                            On this cart, you’ll have the freedom to build your team and become part of Shoryu, the
+                            parent
+                            company of TokyoDango. If you’re ready to take on this challenge, we encourage you to fill
+                            out
+                            the application form and take the first step.</p>
+                    </div>
+                    <img src="resources/a woman selling snacks at_5755033.png"
+                        class="h-5/6 w-64 rounded-md  transition duration-75 ease-in-out hover:transition-all" alt=""
+                        srcset="">
+                </div>
+                <!-- left side image -->
+                <div
+                    class="text-black flex items-center gap-3 flex-col md:flex-row mt-10 drop-shadow-md bg-slate-50 p-1">
+                    <img src="resources/Women Power - Business.png" class="w-full md:w-1/2 h-56 rounded-sm " alt=""
+                        srcset="">
+                    <div class="w-full p-2">
+                        <h1 class="font-bold text-2xl">Thing will get from us</h1>
+
+                        <ul class="list-disc p-5">
+                            <li> You will receive insurance for at least three months.
+                            </li>
+                            <li> You will receive two weeks of training with us.</li>
+                            <li> We will provide authentic Japanese products for your food cart.</li>
+                            <li> You will benefit from free marketing support.</li>
+                            <li> Regular mentorship will be available to guide you.</li>
+                            <li> We will provide financial support to help you start your food cart.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- other outlet display -->
+            <div class="w-11/12 lg:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center mt-5">
+                <div class="bg-red-500 rounded-md p-5 col-span-1">
+                    <h1 class="text-xl font-bold text-black">Main Branch</h1>
+                    <div class="grid grid-cols-4 justify-center items-center">
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/TokyoDango/@23.8123463,90.4237106,129m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3755c70077891fc3:0x9b6ea6900f20fc8!2sTokyoDango!8m2!3d23.8125473!4d90.4237988!16s%2Fg%2F11w22xwrtf!3m5!1s0x3755c70077891fc3:0x9b6ea6900f20fc8!8m2!3d23.8125473!4d90.4237988!16s%2Fg%2F11w22xwrtf?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/location.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">Shop001, Block C, Level
+                            5,
+                            Pragati Avenue, Jamuna
+                            Future Park, Dhaka</div>
+                        <a target="_blank" href="https://wa.me/+8801817721894"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/call-icon.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">01817721894</div>
+
+                    </div>
+                </div>
+                <div class="bg-red-500 rounded-md p-5 col-span-1">
+                    <h1 class="text-xl font-bold text-black">Rajbari Branch</h1>
+                    <div class="grid grid-cols-4 justify-center items-center">
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/Rajbari+Food+Court/@23.8116004,90.4251954,322m/data=!3m1!1e3!4m6!3m5!1s0x3755c75388a239f5:0xb906fd808165355c!8m2!3d23.8115584!4d90.4261151!16s%2Fg%2F11gvrp6f2y?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/location.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">Rajbari Food Court, Dhaka
+                        </div>
+                        <a target="_blank" href="https://wa.me/+8801817721894"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/call-icon.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">01751037376</div>
+
+                    </div>
+                </div>
+                <div class="bg-red-500 rounded-md p-5 col-span-1">
+                    <h1 class="text-xl font-bold text-black">Dhalibari Branch</h1>
+                    <div class="grid grid-cols-4 justify-center items-center">
+                        <a target="_blank"
+                            href="https://www.google.com/maps/place/TokyoDango/@23.8123463,90.4237106,129m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3755c70077891fc3:0x9b6ea6900f20fc8!2sTokyoDango!8m2!3d23.8125473!4d90.4237988!16s%2Fg%2F11w22xwrtf!3m5!1s0x3755c70077891fc3:0x9b6ea6900f20fc8!8m2!3d23.8125473!4d90.4237988!16s%2Fg%2F11w22xwrtf?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/location.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">Dhali Food Court -
+                            Bashundhara
+                            R/A, Dhaka</div>
+                        <a target="_blank" href="https://wa.me/+8801817721894"
+                            class="col-span-1 flex items-center justify-center m-4">
+                            <img class="w-9 h-9" src="resources/call-icon.png" alt="" srcset="">
+                        </a>
+                        <div class="col-span-3 flex items-center justify-start text-white">01817721894</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="">
+            <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="grid gap-10 row-gap-6 mb-8 grid-cols-1 md:grid-cols-2">
+                    <div class="space-y-2 text-sm">
+                        <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+                        <div class="flex">
+                            <p class="mr-1 text-gray-800">Phone:</p>
+                            <a href="tel:+880-01817721894" aria-label="Our phone" title="Our phone"
+                                class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+880-01817721894</a>
+                        </div>
+                        <div class="flex">
+                            <p class="mr-1 text-gray-800">Email:</p>
+                            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email"
+                                class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">shoryubd@gmail.com</a>
+                        </div>
+                        <div class="flex">
+                            <p class="mr-1 text-gray-800">Address:</p>
+                            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                                aria-label="Our address" title="Our address"
+                                class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                                Shop001, Block C, Level
+                                5,
+                                Pragati Avenue, Jamuna
+                                Future Park, Dhaka
+                            </a>
+                        </div>
+                    </div>
+                    <div class="0 flex items-center justify-center flex-col text-center">
+                        <span class="text-base font-bold tracking-wide text-gray-900 w-full">Social</span>
+                        <div class="flex items-center mt-1 space-x-3">
+                            <a target="_blank" href="/"
+                                class=" text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                                <img class="h-10" src="./resources/facebookLogo.png" alt="" srcset="">
+                            </a>
+                            <a target="_blank" href="/"
+                                class=" text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                                <img class="h-10" src="./resources/instagramLogo.png" alt="" srcset="">
+                            </a>
+                            <a target="_blank" href="/"
+                                class=" text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                                <img class="h-10" src="./resources/linkedinLogo.png" alt="" srcset="">
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col-reverse justify-center pt-5 pb-10 border-t lg:flex-row">
+                    <p class="text-sm text-gray-600 text-center">
+                        © Copyright 2020 TokyoDango. All rights reserved.
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+        <div class="h-72">
+        </div>
+    </div>
+
+    <!-- Menu bar -->
+    <div id="bgOfMenu" class="fixed hidden bg-red-800 top-0 left-0 right-0 bottom-0 z-50" onclick="closeMenu()">
+        <div class=" flex justify-center items-start p-1">
+            <img class="w-24" src="./resources/tokyoDangoLogo.png" alt="" srcset="">
+        </div>
+    </div>
+    <div id="MenuDiv"
+        class="fixed z-50 left-0 right-0 bottom-0 h-30 bg-red-700  flex items-center ml-5 mr-5 rounded-t-3xl cursor-pointer flex-col overflow-scroll gap-4 text-white">
+        <h1 class="sticky font-extrabold text-2xl top-0 left-0 right-0 text-white bg-red-700 z-50 w-full p-5 text-center"
+            onclick="displayMenu()">Menu
+        </h1>
+        <!-- food menu -->
+        <div class=" absolute w-11/12 lg:w-5/6 top-20">
+            <table class=" w-full">
+                <tr
+                    class="w-full border text-xl font-bold flex items-center justify-center gap-3 rounded-md lg:rounded-full p-2 m-2 flex-col lg:flex-row">
+                    <td class=""><img src="resources/dangoOur.png" class="lg:h-12 h-44 lg:w-12 w-44 rounded-full" alt=""
+                            srcset="">
+                    </td>
+                    <td>Chicken Dango </td>
+                    <td>(4 piece)</td>
+                    <td>100 TK</td>
+                </tr>
+                <tr
+                    class="w-full border text-xl font-bold flex items-center justify-center gap-3 rounded-md lg:rounded-full p-2 m-2 flex-col lg:flex-row">
+                    <td class=""><img src="resources/shripmDango.png" class="lg:h-12 h-44 lg:w-12 w-44 rounded-full"
+                            alt="" srcset="">
+                    </td>
+                    <td>Shrimp Dango </td>
+                    <td>(3 piece)</td>
+                    <td>100 TK</td>
+                </tr>
+                <tr
+                    class="w-full border text-xl font-bold flex items-center justify-center gap-3 rounded-md lg:rounded-full p-2 m-2 flex-col lg:flex-row">
+                    <td class=""><img src="resources/gyoza.png" class="lg:h-12 h-44 lg:w-12 w-44 rounded-full" alt=""
+                            srcset="">
+                    </td>
+                    <td>Tokyo Gyoza </td>
+                    <td>(3 piece)</td>
+                    <td>100 TK</td>
+                </tr>
+                <tr
+                    class="w-full border text-xl font-bold flex items-center justify-center gap-3 rounded-md lg:rounded-full p-2 m-2 flex-col lg:flex-row">
+                    <td class=""><img src="resources/greenTea.png" class="lg:h-12 h-44 lg:w-12 w-44 rounded-full" alt=""
+                            srcset="">
+                    </td>
+                    <td>Tokyo Green Tea </td>
+                    <td>(1 cup)</td>
+                    <td>50 TK</td>
+                </tr>
+            </table>
+
+            <!-- cross btn -->
+            <div class="absolute w-full h-56 mt-10 flex items-center justify-center" onclick="closeMenu()">
+                <img class="hover:bg-red-950 rounded-full" src="resources/crossBtn.svg" alt="" srcset="">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="google_translate_element"></div>
+
+    <!-- taiwind compile -->
+    <div class=" top-5 h-full hidden"></div>
+</body>
+<script src="src/main.js"></script>
+
+<script>
+
+    const displayMenu = () => {
+        console.log('working')
+        const menuDiv = document.getElementById('MenuDiv');
+        menuDiv.classList.remove("h-30"); // Remove mystyle class from DIV
+        menuDiv.classList.add("h-5/6"); // Add newone class to DIV
+        console.log('workingw')
+        const bgOfMenu = document.getElementById('bgOfMenu');
+        bgOfMenu.classList.remove("hidden"); // Remove mystyle class from DIV
+        bgOfMenu.classList.add("block"); // Add newone class to DIV
+        console.log('workingw')
+    }
+    const closeMenu = () => {
+        const menuDiv = document.getElementById('MenuDiv');
+        menuDiv.classList.remove("h-5/6"); // Remove mystyle class from DIV
+        menuDiv.classList.add("h-30"); // Add newone class to DIV
+        const bgOfMenu = document.getElementById('bgOfMenu');
+        bgOfMenu.classList.remove("block"); // Remove mystyle class from DIV
+        bgOfMenu.classList.add("hidden"); // Add newone class to DIV
+    }
+
+    const minimiseNav = () => {
+        console.log('working')
+        const NavDiv = document.getElementById('navImgWithName');
+        NavDiv.classList.remove("lg:h-40");
+        // NavDiv.classList.add("h-20");
+    }
+
+
+
+    // set img for imgOfFoodDisplaySectionsShop
+    // Array of image URLs
+    const imageLinks = [
+        "./resources/cook1.jpg",
+        "./resources/cook2.jpg",
+        "./resources/cook2.jpg",
+        "./resources/cook2.jpg",
+        "./resources/cook2.jpg",
+        "./resources/cook2.jpg",
+
+    ];
+
+    // Function to change the image
+    function changeImage() {
+        // Select a random index from the array
+        const randomIndex = Math.floor(Math.random() * imageLinks.length);
+
+        // Get the image element
+        const imgElement = document.getElementById("imgOfFoodDisplaySectionsShop");
+
+        // Set the src attribute to the selected image URL
+        imgElement.src = imageLinks[randomIndex];
+    }
+    changeImage();
+    // Array of image URLs
+    const imageLinksFood = [
+        "./resources/gyoza.png",
+        "./resources/dangoOur.png",
+        "./resources/greenTea.png",
+    ];
+
+    // Function to change the image
+    function changeImageFood() {
+        // Select a random index from the array
+        const randomIndex = Math.floor(Math.random() * imageLinksFood.length);
+
+        // Get the image element
+        const imgElement = document.getElementById("imgOfFoodDisplaySectionsFood");
+
+        // Set the src attribute to the selected image URL
+        imgElement.src = imageLinksFood[randomIndex];
+    }
+    changeImageFood();
+
+
+
+    // translate page
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            { pageLanguage: 'en', includedLanguages: 'en,bn,ja' },
+            'google_translate_element'
+        );
+    }
+
+    function translatePage(languageCode) {
+        const selectField = document.querySelector(".goog-te-combo");
+        if (selectField) {
+            selectField.value = languageCode;
+            selectField.dispatchEvent(new Event("change")); // Trigger the change event to translate the page.
+        } else {
+            alert("Translation service not ready yet. Please wait a moment.");
+        }
+    }
+
+
+</script>
+
+</html>
